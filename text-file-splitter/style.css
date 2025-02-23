@@ -478,6 +478,41 @@ label {
     color: #ccc;
 }
 
+.usage-counter {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.counter-badge {
+    background-color: #4F46E5;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 4px rgba(79, 70, 229, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: pulse 2s infinite;
+}
+
+.counter-icon {
+    font-size: 1.2rem;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 @media (max-width: 640px) {
     .container {
         padding: 1rem;

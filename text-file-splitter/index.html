@@ -46,6 +46,12 @@
                 </div>
                 <h1>Divisor Universal de Arquivos (Universal File Splitter)</h1>
             </div>
+            <div class="usage-counter">
+                <div class="counter-badge">
+                    <span class="counter-icon">🔢</span>
+                    <span id="splitCounter">Arquivos divididos: 0</span>
+                </div>
+            </div>
             <h2>Divisor Online Gratuito para Qualquer Tipo de Arquivo</h2>
             <p class="description">
                 Uma ferramenta online que ajuda você a dividir qualquer tipo de arquivo em partes iguais. 
@@ -164,5 +170,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" integrity="sha512-XMVd28F1oH/O71fzwBnV7HucLxVwtxf26XV8P4wPk26EDxuGZ91N8bsOttmnomcCD3CS5ZMRL50H0GgOHvegtg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Inicializa o contador de divisões
+            var splitCount = localStorage.getItem("splitCount") || 0;
+            document.getElementById("splitCounter").textContent = "Divisões realizadas: " + splitCount;
+            
+            // Evento de clique do botão "Dividir!"
+            document.getElementById("splitButton").addEventListener("click", function() {
+                // ... Código existente para dividir o arquivo ...
+
+                // Após a divisão ser concluída com sucesso, atualiza o contador:
+                splitCount = parseInt(localStorage.getItem("splitCount") || 0) + 1;
+                localStorage.setItem("splitCount", splitCount);
+                document.getElementById("splitCounter").textContent = "Divisões realizadas: " + splitCount;
+            });
+        });
+    </script>
 </body>
 </html>
