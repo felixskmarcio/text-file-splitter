@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function() {
+            var metaThemeColor = document.createElement('meta');
+            metaThemeColor.name = 'theme-color';
+            metaThemeColor.content = '#4F46E5';
+            document.head.appendChild(metaThemeColor);
+        })();
+    </script>
+    <script>
+        (function() {
+            var metaThemeColor = document.querySelector('meta[name="theme-color"]');
+            if (!metaThemeColor) {
+                metaThemeColor = document.createElement('meta');
+                metaThemeColor.name = 'theme-color';
+                metaThemeColor.content = '#4F46E5';
+                document.head.appendChild(metaThemeColor);
+            }
+        })();
+    </script>
+    <script>
+        if (!('theme-color' in document.createElement('meta'))) {
+            document.querySelector('meta[name="theme-color"]').remove();
+            var meta = document.createElement('meta');
+            meta.name = 'theme-color';
+            meta.content = '#4F46E5';
+            document.getElementsByTagName('head')[0].appendChild(meta);
+        }
+    </script>
+    <title>Divisor Universal de Arquivos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="title"> 
+                <div class="icon-wrapper">
+                    <span class="icon">📝</span>
+                </div>
+                <h1>Divisor Universal de Arquivos (Universal File Splitter)</h1>
+            </div>
+            <h2>Divisor Online Gratuito para Qualquer Tipo de Arquivo</h2>
+            <p class="description">
+                Uma ferramenta online que ajuda você a dividir qualquer tipo de arquivo em partes iguais. 
+                Diferente de outras ferramentas online, esta faz <strong>todo o processamento no seu 
+                navegador</strong> (lado do cliente, local, privado e seguro) usando tecnologias <strong>HTML5</strong>, então não 
+                há preocupações com privacidade.
+            </p>
+            <div class="instructions-section">
+                <div class="instructions-box">
+                    <h3>Instruções</h3>
+                    <p class="instruction-note">
+                        <strong>Tipos de Divisão:</strong>
+                        <br>• Para arquivos Excel (.xlsx/.xls) e CSV: A divisão será feita por linhas, mantendo o cabeçalho em cada parte.
+                        <br>• Para outros arquivos de texto (TXT, LOG etc): Escolha entre dividir por linhas ou caracteres.
+                        <br>• Para outros tipos de arquivo: A divisão será feita em partes iguais automaticamente.
+                    </p>
+                    <p class="instruction-note">
+                        <strong>Nota:</strong> Se você escolher "Dividir por linhas", os arquivos serão divididos pelo número de linhas contidas neles. 
+                        Por exemplo, um arquivo com 20 linhas dividido em 4 partes gerará 4 arquivos com 5 linhas cada (o tamanho de cada linha é irrelevante para a divisão). 
+                        Se você precisar dividir baseado no tamanho do arquivo, escolha "Dividir por caracteres".
+                    </p>
+                </div>
+                
+                <div class="tags">
+                    <span class="tag">Como dividir arquivos</span>
+                    <span class="tag">Dividir arquivos em partes</span>
+                    <span class="tag">Divisor de arquivos online</span>
+                    <span class="tag">Dividir arquivos grandes</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="splitter-form">
+            <div class="file-upload">
+                <input type="file" id="fileInput" class="hidden-file-input" title="Selecione um arquivo para carregar">
+                <div class="upload-area">
+                    <div class="file-input-container">
+                        <button id="loadFileBtn" class="load-btn">
+                            <svg class="upload-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 16L12 8M12 8L15 11M12 8L9 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3 15V16C3 18.2091 4.79086 20 7 20H17C19.2091 20 21 18.2091 21 16V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Carregar Arquivo
+                        </button>
+                        <button id="clearFileBtn" class="clear-btn hidden">×</button>
+                    </div>
+                    <div class="file-info hidden">
+                        <span id="fileName" class="file-name"></span>
+                        <span id="fileSize" class="file-size"></span>
+                    </div>
+                    <div class="max-size-badge">
+                        <span class="badge-icon">ℹ️</span>
+                        <span>Tamanho máximo 500Mb</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="split-options">
+                <div class="option-group">
+                    <div class="number-input">
+                        <label for="splitNumber">Número de arquivos para dividir:</label>
+                        <input type="number" id="splitNumber" value="2" min="2">
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <h3 class="option-title">Tipo de Divisão</h3>
+                    <div class="split-type">
+                        <div class="radio-option">
+                            <input type="radio" id="characterSplit" name="splitType">
+                            <label for="characterSplit">Dividir por caracteres</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="lineSplit" name="splitType" checked>
+                            <label for="lineSplit">Dividir por linhas</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <h3 class="option-title">Codificação</h3>
+                    <div class="encoding-type">
+                        <div class="radio-option">
+                            <input type="radio" id="utf8" name="encoding">
+                            <label for="utf8">UTF-8</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="ascii" name="encoding" checked>
+                            <label for="ascii">ASCII</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="splitButton" class="split-btn">
+                    <span>Dividir!</span>
+                    <svg class="split-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 3L3 9L9 15M15 3L21 9L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="progress-container">
+                <progress id="progressBar" value="0" max="100" class="hidden"></progress>
+                <p id="progressText" class="hidden-text"></p>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <p>Copyright 2025 © - FelixBR - Todos os direitos reservados</p>
+        <div class="footer-links">
+            <a href="./privacy.html">Privacidade e Termos</a>
+            <span class="separator">-</span>
+            <a href="mailto:felixskmarcio2@gmail.com">Contato</a>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" integrity="sha512-XMVd28F1oH/O71fzwBnV7HucLxVwtxf26XV8P4wPk26EDxuGZ91N8bsOttmnomcCD3CS5ZMRL50H0GgOHvegtg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

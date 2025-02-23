@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function() {
+            var meta = document.createElement('meta');
+            meta.name = 'theme-color';
+            meta.content = '#4F46E5';
+            document.getElementsByTagName('head')[0].appendChild(meta);
+        })();
+    </script>
+    <script>
+        if (!('theme-color' in document.createElement('meta'))) {
+            var meta = document.createElement('meta');
+            meta.name = 'theme-color';
+            meta.content = '#4F46E5';
+            document.getElementsByTagName('head')[0].appendChild(meta);
+        }
+    </script>
+    <script>
+        if (!('theme-color' in document.createElement('meta'))) {
+            document.querySelector('meta[name="theme-color"]').remove();
+            var meta = document.createElement('meta');
+            meta.name = 'theme-color';
+            meta.content = '#4F46E5';
+            document.getElementsByTagName('head')[0].appendChild(meta);
+        }
+    </script>
+    <title>Privacidade e Termos - Divisor de Arquivos de Texto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="title">
+                <div class="icon-wrapper">
+                    <span class="icon">📝</span>
+                </div>
+                <h1>Privacidade e Termos</h1>
+            </div>
+            <p class="description">
+                Ao utilizar nossos serviços, você concorda com a política de privacidade e os termos e condições aqui contidos.
+            </p>
+        </header>
+
+        <main class="privacy-content">
+            <section class="policy-section">
+                <h2>Política de Privacidade</h2>
+                <p>
+                    O serviço fornecido por nós não envia seu arquivo para nosso servidor. Todo o processamento é feito localmente em seu navegador. 
+                    Não há absolutamente nenhuma preocupação com privacidade para seus arquivos.
+                </p>
+            </section>
+
+            <section class="policy-section">
+                <h2>Política de Cookies</h2>
+                <p>
+                    Cookies são usados ​​neste site para armazenar informações do Google para seus anúncios e análises. 
+                    text-file-splitter.felixbr.org não armazena nenhum cookie para seu próprio uso.
+                </p>
+            </section>
+
+            <section class="policy-section">
+                <h2>Análise de Usuário Anônimo</h2>
+                <p>
+                    O Google Analytics e o Microsoft Clarity são usados ​​para coletar dados anônimos de uso do site. 
+                    Isso não inclui nenhum dado dos seus arquivos. Não há absolutamente nenhuma preocupação com a privacidade dos seus arquivos.
+                </p>
+            </section>
+
+            <section class="policy-section">
+                <h2>Termos de Serviço</h2>
+                <h3>Sem garantias</h3>
+                <p>
+                    Quaisquer serviços fornecidos neste site são fornecidos "como estão", sem garantia de qualquer tipo. 
+                    Não garantimos sua disponibilidade, precisão, integridade ou a disponibilidade de suporte relacionado a eles. 
+                    Podemos adicionar, remover ou alterar os serviços fornecidos sem aviso prévio.
+                </p>
+
+                <h3>Limitação da nossa responsabilidade</h3>
+                <p>
+                    O uso deste site é por sua conta e risco. Sob nenhuma circunstância o text-file-splitter.felixbr.org ou qualquer outra parte 
+                    envolvida na produção do conteúdo ou serviços deste site será responsável perante você ou qualquer outra pessoa 
+                    por quaisquer danos indiretos, diretos, especiais, incidentais ou consequentes decorrentes do seu acesso ou uso deste site.
+                </p>
+            </section>
+
+            <div class="back-link">
+                <a href="index.html">← Voltar para o Divisor de Arquivos</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 FelixBR - Todos os direitos reservados</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacidade e Termos</a>
+            <span class="separator">-</span>
+            <a href="mailto:felixskmarcio2@gmail.com">Contato</a>
+        </div>
+    </footer>
+</body>
+</html>
