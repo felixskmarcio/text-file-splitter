@@ -20,5 +20,32 @@
         "primeiros",
         "tamanho",
         "últimos"
-    ]
+    ],
+    "files.associations": {
+        "*.md": "markdown"
+    },
+    "markdown.preview.breaks": true,
+    "markdown.extension.preview.autoShowPreviewToSide": true,
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.formatOnSave": true,
+        "editor.wordWrap": "on",
+        "editor.renderWhitespace": "all",
+        "editor.quickSuggestions": {
+            "comments": true,
+            "strings": true,
+            "other": true
+        }
+    },
+    "markdown.extension.toc.updateOnSave": true,
+    "markdown.extension.toc.levels": "2..6",
+    "extensions": [
+        "yzhang.markdown-all-in-one",
+        "DavidAnson.vscode-markdownlint",
+        "bierner.markdown-preview-github-styles"
+    ],
+    "MD013": false,
+    "MD024": false,
+    "MD033": false,
+    "MD041": false
 }
