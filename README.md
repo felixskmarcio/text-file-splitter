@@ -16,7 +16,7 @@
 
 ## 🚀 Comece em Segundos
 
-1. Acesse [text-file-splitter.felixbr.org](https://text-file-splitter.felixbr.org)
+1. Acesse [aaptextfilesplitter.felixbr.org](https://aaptextfilesplitter.felixbr.org)
 2. Arraste seu arquivo ou clique para selecionar
 3. Escolha como deseja dividir
 4. Pronto! Baixe os arquivos divididos
@@ -57,7 +57,7 @@
 
 Encontrou algum problema ou tem uma sugestão? Estamos aqui para ajudar!
 
-- 📧 Suporte: [text-file-splitter.felixbr.org/support](mailto:felixskmarcio2@gmail.com)
+- 📧 Suporte: [aaptextfilesplitter.felixbr.org/support](mailto:felixskmarcio2@gmail.com)
 - 💬 Feedback direto através do site
 
 ## 🌟 Por que Usar?
